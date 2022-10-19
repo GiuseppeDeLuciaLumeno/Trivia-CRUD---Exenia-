@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiveCoding</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <div class="d-flex justify-content-center align-items-center my-3">
+    <h1>API QUIZ</h1>
+  </div>
+  
+  <div class="quiz-container">
+    <form action="">
+      <label for="question-number">Number of Questions:</label>
+      <input type="number" name="question-number" id="question-number" min="1" max="50">
+      <br><br>
+      <label for="category">Select Category:</label>
+      <select name="category" id="category">
+        <option value="" selected disabled>Choice category</option>
+      </select>
+      <br><br>
+      <label for="difficulty">Select difficulty:</label>
+      <select name="difficulty" id="difficulty">
+        <option value="" selected disabled>Choise difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <br><br>
+      <label for="type">Select Type:</label>
+      <select name="type" id="type">
+        <option value="" selected disabled>Choise type</option>
+        <option value="multiple">Multiple Choice</option>
+        <option value="boolean">True/False</option>
+      </select>
+      <br><br>
+      <button class="btn btn-primary" onclick="getQuiz(event)">Generate Quiz</button>
+    </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link alla CDN di Bootstrap, recupera il css di Bootstrap e lo carica nella pagina -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Live Coding</title>
+  </head>
+  <body>
+    <div class="container-fluid px-2">
+      <div class="d-flex my-3">
+        <input type="text" class="form-control" placeholder="Cerca..." />
+      </div>
+
+      <table class="table table-dark table-striped p-5">
+        <thead>
+          <th class="p-2">#</th>
+          <th class="p-2">Name</th>
+          <th class="p-2">Username</th>
+          <th class="p-2">Email</th>
+          <th class="p-2">City</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="d-flex w-100 justify-content-between p-3">
+        <button id="get-all" class="btn btn-primary px-3">Get All</button>
+        <button id="get-by-id" class="btn btn-secondary px-3">Get By Id</button>
+        <button id="edit" class="btn btn-success px-3">Edit</button>
+        <button id="delete" class="btn btn-danger px-3">Delete</button>
+        <button id="create" class="btn btn-warning px-3">Create</button>
+        <button id="filter-name" class="btn btn-info px-3">
+          Filter by Name
+        </button>
+        <button id="filter-city" class="btn btn-light px-3">
+          Filter by City
+        </button>
+        <button id="sort-name" class="btn btn-dark px-3">Sort by Name</button>
+      </div>
+    </div>
+
+    <!-- Link allo script index.js, il tipo modulo è stato inserito perché il file accoglie import di altri file --> 
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
